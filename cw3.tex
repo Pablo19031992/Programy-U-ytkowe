@@ -1,0 +1,121 @@
+\documentclass[12pt, letterpaper, titlepage]{article}
+\usepackage[left=3.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{amsmath} %pakiet matematyczny
+\usepackage{amssymb} %pakiet dodatkowych symboli
+\title{Ćwiczenie 3}
+\author{Paweł Paweł}
+\date{6 listopada 2022}
+\begin{document}
+\maketitle
+
+\begin{table}
+\centering\caption
+{Przykładowy system decyzyjny (U,A,d), modelujący problem diagnozy medycznej, której efektem jest decyzja o wykonaniu lub nie wykonaniu operacji wycięcia wyrostka robaczkowego, U = \{$u_{1},u_{2},....,u_{10}$\},A = \{$a_{1}, a_{2}$\}, $d\in D$ =\{TAK, NIE\}}
+\begin{tabular}{c|c c c}
+\hline
+Pacjent & Ból brzucha & Temperatura ciała & Operacja\\
+\hline
+$u_{1}$ & \textcolor{red}{Mocny} & \textcolor{red}{Wysoka} & \textcolor{red}{Tak}\\
+$u_{2}$ & \textcolor{blue}{Średni} & \textcolor{red}{Wysoka} & \textcolor{red}{Tak}\\
+$u_{3}$ & \textcolor{red}{Mocny} & \textcolor{blue}{Średnia} & \textcolor{red}{Tak}\\
+$u_{4}$ & \textcolor{red}{Mocny} & \textcolor{green}{Niska} & \textcolor{red}{Tak}\\
+$u_{5}$ & \textcolor{blue}{Średni} & \textcolor{blue}{Średnia} & \textcolor{red}{Tak}\\
+$u_{6}$ & \textcolor{blue}{Średni} & \textcolor{blue}{Średnia} & \textcolor{green}{Nie}\\
+$u_{7}$ & \textcolor{green}{Mały} & \textcolor{red}{Wysoka} & \textcolor{green}{Nie}\\
+$u_{8}$ & \textcolor{green}{Mały} & \textcolor{green}{Niska} & \textcolor{green}{Nie}\\
+$u_{9}$ & \textcolor{red}{Mocny} & \textcolor{green}{Niska} & \textcolor{green}{Nie}\\
+$u_{10}$ & \textcolor{green}{Mały} & \textcolor{blue}{Średnia} & \textcolor{green}{Nie}\\
+\hline
+\end{tabular}
+\end{table}
+\paragraph{Zadanie 2}
+
+
+Bramki logiczne
+\\
+\begin{table}[h]
+\centering\caption{Bramka logiczna NOT}
+\begin{tabular}{l|l}
+\hline a & b($\neg a$)\\
+\hline
+1 & 0\\
+0 & 1\\
+
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering\caption{Bramka logiczna AND}
+\begin{tabular}{l l|l}
+
+a & b & $a\wedge b$\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 1\\
+
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering\caption{Bramka logiczna NAND}
+\begin{tabular}{l l|l}
+
+a & b & $a/b$\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0\\
+
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering\caption{Bramka logiczna OR}
+\begin{tabular}{l l|l}
+
+a & b & $a\vee b$\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 1\\
+
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering\caption{Bramka logiczna NOR}
+\begin{tabular}{l l|l}
+
+a & b & $a\downarrow b$\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 0\\
+
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering\caption{Bramka logiczna XOR}
+\begin{tabular}{l l|l}
+
+a & b & $a\bot b$\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0\\
+
+\end{tabular}
+\end{table}
+\end{document}
+
